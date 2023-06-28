@@ -5,15 +5,14 @@ Code to create an API to connect bigquery to featurestore
 
 To connect BigQuery to a feature store and create an API, you'll need to use a combination of programming languages and frameworks. Here's an example of how you can achieve this using Python, Flask, and the BigQuery and Featurestore libraries:
 1.	Install the required packages:
-2.	
-3.	pip install google-cloud-bigquery google-cloud-aiplatform Flask
+   pip install google-cloud-bigquery google-cloud-aiplatform Flask
 
 2.	Create a new Python file, e.g., api.py, and import the necessary modules
 from flask import Flask, request, jsonify
 from google.cloud import bigquery
 from google.cloud import aiplatform
 
-Initialize the Flask application and BigQuery client:
+3. Initialize the Flask application and BigQuery client:
 
 app = Flask(__name__)
 bigquery_client = bigquery.Client()
@@ -53,7 +52,7 @@ def get_data():
 
     return jsonify({'data': data})
 
-Run the Flask application:
+4. Run the Flask application:
 
 if __name__ == '__main__':
     app.run()
